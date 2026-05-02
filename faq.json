@@ -1,0 +1,86 @@
+[
+  {
+    "pergunta": "renovar renovação rematrícula rematricula re-matrícula re-matricula Q-Acadêmico abandono CCA prazo renovar",
+    "resposta": "A renovação de matrícula é obrigatória e deve ser feita on-line pelo sistema acadêmico (Q-Acadêmico) dentro dos prazos do calendário acadêmico. Se você perder o prazo on-line, tem até 5 dias letivos para regularizar na CCA. Caso contrário, sua matrícula será configurada como ABANDONO.\n\nReferência: Art. 79-81 do ROD"
+  },
+  {
+    "pergunta": "frequência mínima faltas faltar limite presença reprovar reprovação quantidade aulas perder porcentagem",
+    "resposta": "Para ser aprovado, você deve ter frequência igual ou superior a 75% do total de horas letivas da disciplina. Isso significa que pode faltar em até 25% das aulas.\n\nReferência: Art. 99 e 104 do ROD"
+  },
+  {
+    "pergunta": "média aprovação direta nota passar aprovado mínima parcial graduação técnico",
+    "resposta": "A média mínima para aprovação direta varia por modalidade:\nCursos técnicos (concomitante/subsequente): Média Parcial maior ou igual a 6,0\nCursos de graduação: Média Parcial maior ou igual a 7,0\n\nReferência: Art. 99 do ROD"
+  },
+  {
+    "pergunta": "prova final avaliação final média final nota final fiquei final cálculo",
+    "resposta": "A Média Final (MF) é calculada pela média aritmética entre a Média Parcial (MP) e a nota da Avaliação Final (AF). Você será aprovado se a MF for igual ou superior a 5,0.\n\nReferência: Art. 100 e 105 do ROD"
+  },
+  {
+    "pergunta": "justificar falta ausência atestado abono documento comprobatório justificativa",
+    "resposta": "Para justificar faltas, protocole um requerimento na coordenadoria em até 5 dias letivos após o primeiro dia de ausência, anexando atestado médico ou outro documento comprobatório (serviço militar, óbito de parente próximo, etc).\n\nVocê pode protocolar pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 109 do ROD"
+  },
+  {
+    "pergunta": "segunda chamada perdi prova refazer avaliação remarcar",
+    "resposta": "A segunda chamada deve ser requerida em até 5 dias letivos após a data da avaliação original. O procedimento é o mesmo da justificativa de faltas: protocolo com documento comprobatório.\n\nVocê pode protocolar pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 110 do ROD"
+  },
+  {
+    "pergunta": "progressão parcial dependência dever disciplina avançar período retido reprovar",
+    "resposta": "A Progressão Parcial permite avançar para o próximo período devendo até 2 disciplinas. Se reprovar em 3 ou mais, você ficará retido e cursará apenas as disciplinas em que reprovou.\n\nReferência: Art. 106 e 115 do ROD"
+  },
+  {
+    "pergunta": "primeiro semestre primeiro período proibido impedido ingresso calouro",
+    "resposta": "Em regra, não é permitido o trancamento no primeiro período letivo. Exceções são feitas apenas para casos comprovados de saúde, serviço militar, transferência compulsória de trabalho, gravidez de risco ou trabalho formal.\n\nReferência: Art. 151 do ROD"
+  },
+  {
+    "pergunta": "trancar trancamento solicitar interrupção estudos procedimento como trancar curso",
+    "resposta": "O trancamento de matrícula é a interrupção temporária dos estudos sem perder o vínculo com o IFCE. Pode durar até 4 períodos letivos (cursos semestrais) ou 2 períodos letivos (cursos anuais).\n\nComo solicitar pelo SEI:\n1. Acesse https://ifce.edu.br/sei\n2. Clique em Acesso para Usuário Externo\n3. Faça login com seu e-mail cadastrado no Q-Acadêmico\n4. Va em Peticionamento, Processo Novo\n5. Escolha Aluno: Requerimento Geral\n6. Preencha o formulário marcando Trancamento de matrícula\n7. Anexe documentos necessários e clique em Peticionar\n\nReferência: Art. 149-153 do ROD"
+  },
+  {
+    "pergunta": "tempo máximo duração semestres períodos ficar trancado prazo trancamento",
+    "resposta": "O trancamento pode durar até 4 períodos letivos para cursos semestrais ou 2 períodos letivos para cursos anuais.\n\nReferência: Art. 153 do ROD"
+  },
+  {
+    "pergunta": "trancar disciplina cancelar matéria créditos mínimos",
+    "resposta": "É possível trancar uma disciplina nos cursos técnicos (exceto integrados) e de graduação, desde que você permaneça matriculado em pelo menos 12 créditos. Deve ser solicitado nos primeiros 30 dias do período letivo e não é permitido no primeiro semestre.\n\nProtocole pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 155 do ROD"
+  },
+  {
+    "pergunta": "aproveitamento estudos disciplinas outra instituição validar histórico escolar programas",
+    "resposta": "Solicite o aproveitamento na coordenadoria, apresentando histórico escolar e programas das disciplinas.\nIngressantes: até 10 dias letivos após a matrícula\nVeteranos: até 30 dias após o início do período letivo\n\nProtocole pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 133-134 do ROD"
+  },
+  {
+    "pergunta": "abandono reingresso voltar abandonei vagas retornar",
+    "resposta": "O IFCE permite reingresso em oportunidade única, desde que o abandono tenha ocorrido há no máximo 5 anos e existam vagas no curso. O pedido deve ser feito via coordenação.\n\nReferência: Art. 70 do ROD"
+  },
+  {
+    "pergunta": "mudança turno noturno diurno trocar turno vagas trabalho estágio",
+    "resposta": "A mudança de turno pode ser solicitada à coordenadoria com justificativa de trabalho formal ou estágio, dependendo da existência de vagas no turno desejado.\n\nProtocole pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 165 do ROD"
+  },
+  {
+    "pergunta": "regime domiciliar RED exercícios domiciliares doença gravidez laudo médico atividades casa",
+    "resposta": "O Regime de Exercícios Domiciliares (RED) permite substituir aulas presenciais por atividades em casa em casos de doença infectocontagiosa, incapacidade física temporária de pelo menos 15 dias ou gravidez, mediante laudo médico com CID.\n\nProtocole pelo SEI em: https://ifce.edu.br/sei\nReferência: Art. 180-182 do ROD"
+  },
+  {
+    "pergunta": "nome social identidade gênero registro acadêmico diploma solicitação",
+    "resposta": "O IFCE garante o uso do nome social em registros acadêmicos, avaliações e diplomas, mediante solicitação ao gestor de ensino do campus.\n\nReferência: Art. 176-177 do ROD"
+  },
+  {
+    "pergunta": "SEI peticionamento protocolar requerimento solicitação processo sistema eletrônico acessar",
+    "resposta": "O SEI (Sistema Eletrônico de Informações) é o sistema oficial do IFCE para protocolar requerimentos.\n\nComo acessar:\n1. Acesse https://ifce.edu.br/sei\n2. Clique em Acesso para Usuário Externo\n3. Use o e-mail cadastrado no Q-Acadêmico\n4. No primeiro acesso, clique em Esqueci minha senha para gerar sua senha\n\nComo abrir um processo:\n1. Va em Peticionamento, Processo Novo\n2. Escolha Aluno: Requerimento Geral\n3. Preencha o formulário e anexe os documentos em PDF (máx. 50MB)\n4. Clique em Peticionar e assine eletronicamente"
+  },
+  {
+    "pergunta": "senha SEI login acesso externo cadastro primeiro acesso usuário externo",
+    "resposta": "Para acessar o SEI pela primeira vez:\n1. Acesse https://ifce.edu.br/sei\n2. Clique em Acesso para Usuário Externo\n3. Clique em Esqueci minha senha\n4. Informe seu e-mail cadastrado no Q-Acadêmico\n5. A senha será enviada automaticamente para seu e-mail\n\nApós o primeiro acesso, altere sua senha pelo menu Alterar Senha no lado esquerdo da tela."
+  },
+  {
+    "pergunta": "acompanhar processo SEI andamento consultar situação protocolo recibo",
+    "resposta": "Você pode acompanhar seus processos no SEI de duas formas:\nLogado no sistema: acesse Recibos Eletrônicos de Protocolo no menu lateral\nSem login: use a Pesquisa Publica em https://ifce.edu.br/sei com o número do processo\n\nUm e-mail automático também é enviado ao confirmar o peticionamento."
+  },
+  {
+    "pergunta": "documentos PDF formato arquivo tamanho máximo digitalizar enviar SEI",
+    "resposta": "Os documentos enviados pelo SEI devem estar em formato PDF com tamanho máximo de 50MB por arquivo.\n\nSe o documento estiver em papel, digitalize com resolução de 300 dpi, em tons de cinza ou preto e branco, preferencialmente com OCR ativado.\n\nGuarde o documento original, pois pode ser solicitado para conferência."
+  },
+  {
+  "pergunta": "horário atendimento coordenadoria secretaria contato telefone endereço campus",
+  "resposta": "Essa informação não está disponível neste chatbot. Para horários de atendimento e contatos, consulte diretamente a coordenadoria do seu curso ou a secretaria do campus."
+  }
+]
