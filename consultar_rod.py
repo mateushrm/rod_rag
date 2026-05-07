@@ -9,15 +9,12 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
-# Caminho absoluto — funciona com uvicorn
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Embeddings
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 )
 
-# Banco vetorial
 vectorstore = Chroma(
     persist_directory=os.path.join(BASE_DIR, "db_rod"),
     embedding_function=embeddings
@@ -28,14 +25,12 @@ retriever = vectorstore.as_retriever(
     search_kwargs={"k": 10, "fetch_k": 20}
 )
 
-# LLM
 llm = ChatOpenAI(
     model="gpt-4o-mini",
     temperature=0,
     max_tokens=300
 )
 
-# Prompt
 prompt = PromptTemplate(
     template="""
 Você é um assistente virtual do IFCE campus Tianguá, especializado em apoio acadêmico.

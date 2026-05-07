@@ -14,7 +14,6 @@ from consultar_rod import buscar_faq, responder_rag
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 
-# Histórico por chat_id
 historicos = defaultdict(list)
 
 # Mensagem de boas-vindas
@@ -133,7 +132,6 @@ def buscar_resposta(pergunta: str, chat_id: int):
             pergunta_com_contexto = pergunta
         resposta = responder_rag(pergunta_com_contexto)
 
-    # Salva no histórico
     historico.append(pergunta)
     if len(historico) > 5:
         historico.pop(0)
@@ -200,7 +198,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     pergunta_lower = pergunta.strip().lower()
 
-    # Saudações — abre o menu principal
+    # Saudações
     if pergunta_lower in SAUDACOES:
         historicos[chat_id].clear()
         await update.message.reply_text(
@@ -209,7 +207,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
-    # Despedidas — encerra a conversa
+    # Despedidas
     if pergunta_lower in DESPEDIDAS:
         historicos[chat_id].clear()
         await update.message.reply_text(

@@ -5,12 +5,12 @@ from consultar_rod import buscar_faq, responder_rag
 
 app = FastAPI()
 
-# Modelo para o Swagger aceitar JSON
+#Modelo de dados para o Dialogflow
 class DialogflowRequest(BaseModel):
     queryResult: dict
     session: str = "default"
 
-# Memória de sessão (últimas perguntas por usuário)
+# Memória de sessão
 sessoes = defaultdict(list)
 
 
@@ -26,10 +26,10 @@ async def webhook(req: DialogflowRequest):
 
         historico = sessoes[session_id]
 
-        # 1. FAQ usa só a pergunta atual (sem contexto histórico)
+        # FAQ usa só a pergunta atual (sem contexto histórico)
         resposta = buscar_faq(pergunta)
 
-        # 2. RAG usa contexto histórico para perguntas de acompanhamento
+        # RAG usa contexto histórico para perguntas de acompanhamento
         if not resposta:
             if historico:
                 pergunta_com_contexto = f"{' '.join(historico[-2:])} {pergunta}"
