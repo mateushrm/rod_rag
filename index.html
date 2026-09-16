@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RodBot - Assistente do ROD IFCE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #006847;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header div h1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    header div p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .container h2 {
+      font-size: 28px;
+      color: #006847;
+      margin-bottom: 16px;
+    }
+
+    .container p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .telegram-link {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background-color: #0088cc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .telegram-link:hover {
+      background-color: #006fa8;
+    }
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 40px;
+    }
+
+    .categoria {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 14px;
+      color: #006847;
+      font-weight: bold;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      color: #999;
+      margin-top: 60px;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #006847;
+      --df-messenger-button-titlebar-color: #006847;
+      --df-messenger-chat-bubble-background: #006847;
+      --df-messenger-send-icon: #006847;
+      --df-messenger-user-message: #0088cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>RodBot</h1>
+      <p>Assistente virtual do ROD - IFCE Campus Tianguá</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Tire suas dúvidas sobre o ROD</h2>
+    <p>
+      O <strong>RodBot</strong> é um assistente virtual desenvolvido para ajudar os estudantes
+      do IFCE Campus Tianguá a consultar o Regulamento da Organização Didática (ROD)
+      e o Sistema Eletrônico de Informações (SEI) de forma rápida e acessível.
+    </p>
+    <p>
+      Clique no botão de chat no canto inferior direito para começar, ou acesse diretamente
+      pelo Telegram:
+    </p>
+
+    <a class="telegram-link" href="https://t.me/rodbot_ifce_bot" target="_blank">
+      Acessar pelo Telegram
+    </a>
+
+    <div class="categorias">
+      <div class="categoria">Matrícula</div>
+      <div class="categoria">Avaliações e Notas</div>
+      <div class="categoria">Faltas e Frequência</div>
+      <div class="categoria">Trancamento</div>
+      <div class="categoria">SEI e Protocolos</div>
+      <div class="categoria">Direitos Discentes</div>
+    </div>
+  </div>
+
+  <footer>
+    Desenvolvido por Mateus Henrique Rodrigues Matos — IFCE Campus Tianguá, 2026
+  </footer>
+
+  <!-- Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="RodBot"
+    agent-id="7e7e905f-19b6-43b6-af61-bcbd0ce9d208"
+    language-code="pt-br">
+  </df-messenger>
+
+</body>
+</html>
