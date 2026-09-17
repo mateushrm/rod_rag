@@ -63,6 +63,46 @@ Resposta:
 with open(os.path.join(BASE_DIR, "faq.json"), "r", encoding="utf-8") as f:
     _faq = json.load(f)
 
+CATEGORIAS = {
+    "matrícula": [
+        "Como faço a renovação de matrícula?",
+        "Como solicitar mudança de turno?",
+    ],
+    "avaliações e notas": [
+        "Qual a média para passar direto?",
+        "Como funciona a prova final?",
+        "Como solicitar segunda chamada?",
+    ],
+    "faltas e frequência": [
+        "Quantas faltas posso ter?",
+        "Como justificar minhas faltas?",
+    ],
+    "trancamento": [
+        "Como faço para trancar meu curso?",
+        "Por quanto tempo posso ficar trancado?",
+        "Posso trancar no primeiro semestre?",
+        "Posso trancar só uma disciplina?",
+    ],
+    "sei e protocolos": [
+        "Como acesso o SEI pela primeira vez?",
+        "Como abrir um processo no SEI?",
+        "Como acompanhar meu processo?",
+    ],
+    "direitos discentes": [
+        "O que é o Regime de Exercícios Domiciliares?",
+        "Tenho direito ao uso do nome social?",
+        "O que é progressão parcial?",
+    ]
+}
+ 
+ 
+def verificar_categoria(pergunta: str):
+    pergunta_lower = pergunta.strip().lower()
+    if pergunta_lower in CATEGORIAS:
+        perguntas = CATEGORIAS[pergunta_lower]
+        return "Escolha uma pergunta:\n\n" + "\n".join(f"• {p}" for p in perguntas)
+    return None
+
 
 def buscar_faq(pergunta: str):
     stopwords = {"de", "a", "o", "e", "em", "no", "na", "os", "as",
@@ -135,9 +175,17 @@ def responder_rag(pergunta: str):
 
 
 def responder(pergunta: str):
+    # 1. Verifica se é uma categoria
+    resposta_categoria = verificar_categoria(pergunta)
+    if resposta_categoria:
+        return resposta_categoria
+ 
+    # 2. FAQ
     resposta_faq = buscar_faq(pergunta)
     if resposta_faq:
         return resposta_faq
+ 
+    # 3. RAG
     return responder_rag(pergunta)
 
 
