@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from collections import defaultdict
-from consultar_rod import buscar_faq, responder_rag
+from consultar_rod import buscar_faq, responder_rag, verificar_categoria
 
 app = FastAPI()
 
@@ -26,8 +26,12 @@ async def webhook(req: DialogflowRequest):
 
         historico = sessoes[session_id]
 
-        # FAQ usa só a pergunta atual (sem contexto histórico)
-        resposta = buscar_faq(pergunta)
+	# Verifica categoria
+        resposta = verificar_categoria(pergunta)
+
+        # FAQ usa só a pergunta atual
+        if not resposta:
+            resposta = buscar_faq(pergunta)
 
         # RAG usa contexto histórico para perguntas de acompanhamento
         if not resposta:

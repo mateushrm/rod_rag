@@ -1,4 +1,4 @@
-import os
+﻿import os
 import re
 import json
 from dotenv import load_dotenv
@@ -60,28 +60,25 @@ Resposta:
 )
 
 # FAQ
-with open(os.path.join(BASE_DIR, "faq.json"), "r", encoding="utf-8") as f:
-    _faq = json.load(f)
-
 CATEGORIAS = {
-    "matrícula": [
-        "Como faço a renovação de matrícula?",
-        "Como solicitar mudança de turno?",
+    "matricula": [
+        "Como faco a renovacao de matricula?",
+        "Como solicitar mudanca de turno?",
     ],
-    "avaliações e notas": [
-        "Qual a média para passar direto?",
+    "avaliacoes e notas": [
+        "Qual a media para passar direto?",
         "Como funciona a prova final?",
         "Como solicitar segunda chamada?",
     ],
-    "faltas e frequência": [
+    "faltas e frequencia": [
         "Quantas faltas posso ter?",
         "Como justificar minhas faltas?",
     ],
     "trancamento": [
-        "Como faço para trancar meu curso?",
+        "Como faco para trancar meu curso?",
         "Por quanto tempo posso ficar trancado?",
         "Posso trancar no primeiro semestre?",
-        "Posso trancar só uma disciplina?",
+        "Posso trancar so uma disciplina?",
     ],
     "sei e protocolos": [
         "Como acesso o SEI pela primeira vez?",
@@ -89,21 +86,27 @@ CATEGORIAS = {
         "Como acompanhar meu processo?",
     ],
     "direitos discentes": [
-        "O que é o Regime de Exercícios Domiciliares?",
+        "O que e o Regime de Exercicios Domiciliares?",
         "Tenho direito ao uso do nome social?",
-        "O que é progressão parcial?",
+        "O que e progressao parcial?",
     ]
 }
- 
- 
-def verificar_categoria(pergunta: str):
-    pergunta_lower = pergunta.strip().lower()
-    if pergunta_lower in CATEGORIAS:
-        perguntas = CATEGORIAS[pergunta_lower]
-        return "Escolha uma pergunta:\n\n" + "\n".join(f"• {p}" for p in perguntas)
+
+
+def verificar_categoria(pergunta):
+    import unicodedata
+    def normalizar(texto):
+        return unicodedata.normalize('NFD', texto).encode('ascii', 'ignore').decode('utf-8').lower().strip()
+    
+    pergunta_norm = normalizar(pergunta)
+    for categoria, perguntas in CATEGORIAS.items():
+        if normalizar(categoria) == pergunta_norm:
+            return "Escolha uma pergunta:\n\n" + "\n".join("- " + p for p in perguntas)
     return None
 
-
+with open(os.path.join(BASE_DIR, "faq.json"), "r", encoding="utf-8") as f:
+    _faq = json.load(f)
+  
 def buscar_faq(pergunta: str):
     stopwords = {"de", "a", "o", "e", "em", "no", "na", "os", "as",
                  "do", "da", "um", "uma", "que", "se", "para", "com",
@@ -179,7 +182,7 @@ def responder(pergunta: str):
     resposta_categoria = verificar_categoria(pergunta)
     if resposta_categoria:
         return resposta_categoria
- 
+
     # 2. FAQ
     resposta_faq = buscar_faq(pergunta)
     if resposta_faq:

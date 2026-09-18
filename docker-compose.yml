@@ -1,11 +1,31 @@
 version: '3.9'
 
 services:
-  rodbot:
+  api:
     build: .
-    container_name: rodbot
+    container_name: rodbot-api
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
     env_file:
       - .env
     restart: unless-stopped
+    networks:
+      default:
+        ipv4_address: 192.168.100.10
+
+  telegram:
+    build: .
+    container_name: rodbot-telegram
+    command: python telegram_bot.py
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - api
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
